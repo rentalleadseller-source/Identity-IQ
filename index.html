@@ -46,12 +46,6 @@ header .logo {
   text-align: center;
 }
 
-h1 {
-  color: var(--primary);
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-}
-
 .lead {
   color: var(--text-muted);
   font-size: 1rem;
@@ -196,14 +190,6 @@ footer {
   color: var(--text-muted);
   margin: 40px 0 20px;
 }
-footer a {
-  color: var(--primary);
-  text-decoration: none;
-  margin: 0 6px;
-}
-footer a:hover {
-  text-decoration: underline;
-}
 </style>
 </head>
 <body>
@@ -213,7 +199,6 @@ footer a:hover {
 </header>
 
 <div class="container">
-  <h1>🔍 Public Record Insights</h1>
   <p id="geo" class="lead">Checking Your Eligibility... <span id="spinner">⏳</span></p>
   <div class="meter">🟢 Instantly search public and background records</div>
 
@@ -242,46 +227,55 @@ footer a:hover {
 </div>
 
 <footer>
-  © 2025 Public Record Insights — All rights reserved • 
-  <a href="#">Privacy</a> • <a href="#">Terms</a>
+  © 2025 Public Record Insights — All rights reserved
 </footer>
 
 <script>
-// Eligibility spinner -> professional congrats
-setTimeout(() => {
-  const geoEl = document.getElementById('geo');
-  geoEl.innerHTML = `🎉 Congratulations! You are eligible for your public record check ✅`;
-  geoEl.classList.add('congrats');
-}, 2000);
+document.addEventListener("DOMContentLoaded", function() {
+  // Get user IP from ipify
+  fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      const geoEl = document.getElementById('geo');
+      geoEl.innerHTML = `🎉 Congrats! You are eligible from ${data.ip}`;
+      geoEl.classList.add('congrats');
+    })
+    .catch(() => {
+      // fallback if IP fetch fails
+      const geoEl = document.getElementById('geo');
+      geoEl.innerHTML = `🎉 Congrats! You are eligible`;
+      geoEl.classList.add('congrats');
+    });
 
-// Vertical auto-sliding reviews
-const reviewsData = [
-  {stars:"⭐⭐⭐⭐⭐ (5.0)",text:"Super easy to check records — details were clear and accurate 😄",name:"— Amanda L., Texas"},
-  {stars:"⭐⭐⭐⭐⭐ (4.9)",text:"Quick and reliable. Definitely recommend 👍",name:"— Jason T., Florida"},
-  {stars:"⭐⭐⭐⭐⭐ (4.8)",text:"Gave me instant peace of mind 😊",name:"— Rachel M., Ohio"},
-  {stars:"⭐⭐⭐⭐⭐ (5.0)",text:"Clean interface, fast results 🔒",name:"— Kevin D., California"},
-  {stars:"⭐⭐⭐⭐⭐ (4.9)",text:"Makes background checks simple and reliable 😍",name:"— Priya S., New York"},
-  {stars:"⭐⭐⭐⭐⭐ (4.7)",text:"Accurate info every time ⏱️",name:"— Daniel R., Illinois"}
-];
+  // Reviews auto-sliding
+  const reviewsData = [
+    {stars:"⭐⭐⭐⭐⭐ (5.0)",text:"Super easy to check records — details were clear and accurate 😄",name:"— Amanda L., Texas"},
+    {stars:"⭐⭐⭐⭐⭐ (4.9)",text:"Quick and reliable. Definitely recommend 👍",name:"— Jason T., Florida"},
+    {stars:"⭐⭐⭐⭐⭐ (4.8)",text:"Gave me instant peace of mind 😊",name:"— Rachel M., Ohio"},
+    {stars:"⭐⭐⭐⭐⭐ (5.0)",text:"Clean interface, fast results 🔒",name:"— Kevin D., California"},
+    {stars:"⭐⭐⭐⭐⭐ (4.9)",text:"Makes background checks simple and reliable 😍",name:"— Priya S., New York"},
+    {stars:"⭐⭐⭐⭐⭐ (4.7)",text:"Accurate info every time ⏱️",name:"— Daniel R., Illinois"}
+  ];
 
-const box = document.getElementById('review-box');
-let idx = 0;
-reviewsData.sort(() => Math.random() - 0.5);
+  const box = document.getElementById('review-box');
+  let idx = 0;
+  reviewsData.sort(() => Math.random() - 0.5);
 
-function showNextReview() {
-  const review = reviewsData[idx];
-  box.classList.add('fade');
-  setTimeout(() => {
-    box.innerHTML = `<div class="stars">${review.stars}</div>
-                     <p>${review.text}</p>
-                     <div class="name">${review.name}</div>`;
-    box.classList.remove('fade');
-  }, 500);
-  idx = (idx + 1) % reviewsData.length;
-}
+  function showNextReview() {
+    const review = reviewsData[idx];
+    box.classList.add('fade');
+    setTimeout(() => {
+      box.innerHTML = `<div class="stars">${review.stars}</div>
+                       <p>${review.text}</p>
+                       <div class="name">${review.name}</div>`;
+      box.classList.remove('fade');
+    }, 500);
+    idx = (idx + 1) % reviewsData.length;
+  }
 
-setInterval(showNextReview, 4000);
-showNextReview();
+  setInterval(showNextReview, 4000);
+  showNextReview();
+});
 </script>
 </body>
 </html>
