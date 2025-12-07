@@ -1,200 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Public Record Insights</title>
-
-<style>
-:root{
-  --primary:#1a73e8;      /* Business blue */
-  --primary-dark:#1558b0;
-  --accent:#0cc0a0;       /* Professional teal */
-  --bg:#f5f7fa;           /* Clean light background */
-  --text:#1a1a1a;
-  --card:#ffffff;
-  --muted:#6b7280;
-  --border:#e5e7eb;
-}
-
-body{
-  margin:0;
-  font-family:Inter, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  text-align:center;
-}
-
-header{ padding:35px 0 15px; }
-.logo{
-  font-size:2rem; font-weight:700; letter-spacing:.5px;
-  background:linear-gradient(90deg,var(--primary),var(--accent));
-  -webkit-background-clip:text; color:transparent;
-}
-
-.card{
-  max-width:720px; margin:0 auto; padding:35px 25px;
-  border-radius:14px; background:var(--card);
-  border:1px solid var(--border);
-  box-shadow:0 4px 25px rgba(0,0,0,0.06);
-}
-
-.lead{
-  color:var(--muted); font-size:1rem;
-  margin-bottom:20px; transition:.4s;
-}
-.lead.ok{
-  font-size:1.3rem; font-weight:600;
-  color:var(--primary-dark);
-}
-
-.meter{
-  background:#eaf1ff;
-  border-left:4px solid var(--primary);
-  padding:12px 16px; border-radius:8px;
-  font-weight:500; margin:18px auto 25px;
-}
-
-ul{ padding:0; list-style:none; margin:0; }
-li{
-  background:#f0f4ff;
-  border-left:4px solid var(--accent);
-  padding:12px 14px; border-radius:8px;
-  margin-bottom:10px; text-align:left;
-  color:#1a1a1a;
-}
-.dont-back{
-  text-align:center; font-weight:700;
-  border-left:4px solid var(--primary-dark);
-  background:#e2e8ff;
-}
-.back-em{ color:#c62828; }
-
-.cta{
-  display:inline-block; margin-top:20px;
-  padding:14px 28px;
-  background:linear-gradient(90deg,var(--primary),var(--primary-dark));
-  text-decoration:none; color:#fff;
-  font-weight:600; border-radius:10px;
-  font-size:1.05rem;
-  transition:.25s;
-}
-.cta:hover{
-  transform:translateY(-3px);
-  background:linear-gradient(90deg,var(--primary-dark),var(--primary));
-}
-
-.trust{ margin-top:18px; font-size:.85rem; color:var(--muted); }
-
-.reviews{ margin-top:40px; }
-.reviews h2{
-  font-size:1.3rem;
-  background:linear-gradient(90deg,var(--primary),var(--accent));
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-#review-box{
-  padding:20px; background:#f8faff;
-  border-radius:12px; min-height:120px;
-  transition:.4s;
-  border:1px solid var(--border);
-}
-.fade{ opacity:0; transform:translateY(8px); }
-
-.stars{ color:#e0a800; margin-bottom:6px; }
-.name{ color:var(--muted); font-size:.9rem; }
-
-footer{
-  margin:40px 0 20px;
-  font-size:.8rem; color:var(--muted);
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Credit & Background Check</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
-
-<body>
-
-<header>
-  <div class="logo">Public Record Insights</div>
-</header>
-
-<div class="card">
-
-  <p id="geo" class="lead">Checking your eligibility...</p>
-
-  <div class="meter">🟢 Instant public & background record search</div>
-
-  <ul>
-    <li>📑 Access public + background records</li>
-    <li>🔒 Secure & encrypted results</li>
-    <li>⚡ Fast & automated processing</li>
-    <li class="dont-back">🕵 For accurate processing, please avoid using the <span class="back-em">BACK</span> button.</li>
-  </ul>
-
-  <a class="cta" href="https://afflat3a2.com/trk/lnk/BC873D0C-00DD-4E9B-8DEF-1E3F9A990FD2/?o=24933&c=918277&a=712815&k=7A1DF23FCB26932E1504627918574318&l=26023&s1=1325=N-SAS-Peter" target="_blank" rel="noopener sponsored">
-     ➜ Check Background Report
-  </a>
-
-  <div class="trust">🔒 SSL Secured • 🌐 Independent • ⚡ Fast Results</div>
-
-  <div class="reviews">
-    <h2>Recent Feedback</h2>
-    <div id="review-box">
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <p>Loading reviews...</p>
-      <div class="name">— User</div>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-700">Public-Record USA</h1>
+      <nav class="space-x-6 text-gray-600 font-medium">
+        <a href="#process" class="hover:text-blue-700">How It Works</a>
+      </nav>
     </div>
-  </div>
-</div>
+  </header>
 
-<footer>© 2025 Public Record Insights</footer>
+  <!-- Hero Section -->
+  <section class="bg-blue-700 text-white py-20">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-4">Credit & Background Screening</h2>
+      <p class="text-lg mb-6">Fast, secure, and authorized tenant verification for rental applications across the United States.</p>
+      <a href="https://afflat3a2.com/trk/lnk/BC873D0C-00DD-4E9B-8DEF-1E3F9A990FD2/?o=24933&c=918277&a=712815&k=7A1DF23FCB26932E1504627918574318&l=26023&s1=1325=N-SAS-Peter" class="bg-white text-blue-700 font-semibold px-8 py-3 rounded-lg shadow hover:bg-gray-200 transition">Start Screening</a>
+    </div>
+  </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const geoEl = document.getElementById("geo");
+  <!-- Features Section -->
+  <section id="features" class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose Our Screening?</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-  fetch("https://ipapi.co/json/")
-    .then(res => res.json())
-    .then(data => {
-      const city    = data.city || "";
-      const region  = data.region || "";
-      const country = data.country_name || "";
+        <div class="bg-white shadow-lg rounded-xl p-8 text-center">
+          <h4 class="text-xl font-semibold mb-4 text-blue-700">Secure Data Handling</h4>
+          <p>Your information is encrypted and processed through approved and compliant verification partners.</p>
+        </div>
 
-      geoEl.innerHTML = `🎉 You are eligible from <strong>${city}, ${region}, ${country}</strong>`;
-      geoEl.classList.add("ok");
-    })
-    .catch(() => {
-      geoEl.innerHTML = "🎉 You are eligible from your location!";
-      geoEl.classList.add("ok");
-    });
-});
+        <div class="bg-white shadow-lg rounded-xl p-8 text-center">
+          <h4 class="text-xl font-semibold mb-4 text-blue-700">Instant Results</h4>
+          <p>Receive screening results quickly for faster rental application decisions.</p>
+        </div>
 
-const reviews=[
- {s:"⭐⭐⭐⭐⭐",t:"Professional and reliable.",n:"— Amanda"},
- {s:"⭐⭐⭐⭐⭐",t:"Results delivered instantly.",n:"— Jason"},
- {s:"⭐⭐⭐⭐⭐",t:"Very easy to use.",n:"— Rachel"},
- {s:"⭐⭐⭐⭐⭐",t:"Clean business layout.",n:"— Kevin"},
- {s:"⭐⭐⭐⭐",t:"I'm satisfied!",n:"— David"},
- {s:"⭐⭐⭐⭐",t:"Accurate and trustworthy service.",n:"— Priya"}
-];
+        <div class="bg-white shadow-lg rounded-xl p-8 text-center">
+          <h4 class="text-xl font-semibold mb-4 text-blue-700">Fully Authorized</h4>
+          <p>We require full applicant consent before completing any credit or background check.</p>
+        </div>
 
-reviews.sort(()=>Math.random()-0.5);
+      </div>
+    </div>
+  </section>
 
-let idx=0;
-const box=document.getElementById("review-box");
+  <!-- How It Works -->
+  <section id="process" class="bg-gray-100 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">How The Process Works</h3>
 
-function showReview(){
-  const r=reviews[idx];
-  box.classList.add("fade");
-  setTimeout(()=>{
-    box.innerHTML=`<div class="stars">${r.s}</div><p>${r.t}</p><div class="name">${r.n}</div>`;
-    box.classList.remove("fade");
-  },350);
-  idx=(idx+1)%reviews.length;
-}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-setInterval(showReview,3500);
-showReview();
-</script>
+        <div class="text-center">
+          <div class="text-blue-700 text-3xl font-bold mb-4">1</div>
+          <h4 class="text-xl font-semibold mb-2">Submit Applicant Info</h4>
+          <p>Provide your basic details and confirm your authorization for screening.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="text-blue-700 text-3xl font-bold mb-4">2</div>
+          <h4 class="text-xl font-semibold mb-2">Identity Verification</h4>
+          <p>We confirm identity securely through our verification partners.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="text-blue-700 text-3xl font-bold mb-4">3</div>
+          <h4 class="text-xl font-semibold mb-2">Receive Screening Report</h4>
+          <p>Your authorized credit & background report is generated and shared.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-white py-10 border-t">
+    <div class="max-w-6xl mx-auto px-6 text-center text-gray-600">
+      <p class="font-semibold text-gray-700">Public-Record USA</p>
+      <p class="mt-1 text-sm">Public-Record | Data Security Certified</p>
+      <p class="mt-4 text-xs text-gray-500">© 2025 Public-Record USA. All Rights Reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
